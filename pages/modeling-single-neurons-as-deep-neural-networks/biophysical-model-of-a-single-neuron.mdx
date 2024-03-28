@@ -1,0 +1,41 @@
+import { Callout, Steps, Step } from "nextra-theme-docs";
+
+# Biophysical Model of a Single Neuron
+
+To understand how single neurons can perform complex computations, researchers created a detailed biophysically realistic model of a cortical neuron. This model was based on a reconstructed morphology of a real neuron and incorporated various mathematical equations describing the dynamics of membrane voltage, ion channel behavior, and ionic fluxes.
+
+<Callout type="info">
+The biophysical model used in this study is an example of a multi-compartmental model, which divides the neuron into multiple segments, each with its own set of equations governing the electrical and chemical properties.
+</Callout>
+
+The key components of the biophysical model include:
+
+- **Reconstructed morphology**: The spatial structure of the neuron, including the soma, dendrites, and axon, was based on a real cortical neuron's morphology.
+
+- **Membrane voltage dynamics**: The model described the changes in membrane potential over time using the cable equation, which takes into account the capacitive and resistive properties of the cell membrane.
+
+- **Ion channel kinetics**: The opening and closing of various ion channels, such as voltage-gated sodium, potassium, and calcium channels, were modeled using differential equations that capture their voltage-dependent and time-dependent behavior.
+
+- **Ionic fluxes**: The movement of ions across the cell membrane through ion channels was modeled based on the electrochemical gradients and the conductance of the channels.
+
+<Steps>
+### Step 1
+
+The reconstructed morphology of the neuron was divided into multiple compartments, each representing a small segment of the cell membrane.
+
+### Step 2
+
+For each compartment, the model included equations describing the membrane voltage dynamics, ion channel kinetics, and ionic fluxes.
+
+### Step 3
+
+The model was simulated by numerically solving the coupled differential equations across all compartments, allowing researchers to observe the spatial and temporal evolution of the neuron's electrical activity.
+</Steps>
+
+Here's an example of the cable equation used to describe the membrane voltage dynamics in a single compartment:
+
+$$C_m\frac{dV_m}{dt} = -\sum_i I_i + \frac{V_m - V_{rest}}{R_m}$$
+
+where $C_m$ is the membrane capacitance, $V_m$ is the membrane potential, $I_i$ represents the ionic currents through different types of ion channels, $R_m$ is the membrane resistance, and $V_{rest}$ is the resting membrane potential.
+
+To study the neuron's input-output relationship, the biophysical model was stimulated with a set of synaptic inputs, and the resulting voltage trace at the soma was recorded as the output. This detailed model served as a ground truth for comparing the computational capabilities of single neurons with artificial neural networks, as discussed in the [Equivalent Deep Neural Network](/modeling-single-neurons-as-deep-neural-networks/equivalent-deep-neural-network) section.

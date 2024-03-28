@@ -1,0 +1,36 @@
+import { Callout, Steps, Step } from "nextra-theme-docs";
+
+# The Perceptron Model
+
+The perceptron, introduced by Frank Rosenblatt in 1958, is a simple computational model inspired by the workings of biological neurons. It consists of a single layer of artificial neurons, each receiving weighted inputs and producing an output based on a threshold function.
+
+## How a Perceptron Works
+
+A perceptron takes a set of binary inputs $(x_1, x_2, ..., x_n)$, multiplies each input by a corresponding weight $(w_1, w_2, ..., w_n)$, and sums the weighted inputs. If the sum exceeds a certain threshold $\theta$, the perceptron outputs a 1; otherwise, it outputs a 0.
+
+Mathematically, the output $y$ of a perceptron can be expressed as:
+
+$y = \begin{cases}
+1, & \text{if } \sum_{i=1}^{n} w_i x_i > \theta \\
+0, & \text{otherwise}
+\end{cases}$
+
+<Callout type="info">
+The perceptron's output function is a simple step function, which makes it a binary classifier.
+</Callout>
+
+## Limitations of the Perceptron Model
+
+While the perceptron was a groundbreaking concept in artificial intelligence, it has several limitations when compared to biological neurons:
+
+1. **Linear separability**: Perceptrons can only solve linearly separable problems. They cannot learn to classify inputs that are not linearly separable, such as the XOR function. In contrast, biological neurons can perform complex computations, including the XOR operation, thanks to the computational power of their dendrites (see [Dendritic Spikes and XOR Operation](/the-role-of-dendrites-in-neural-computations/dendritic-spikes-and-xor-operation)).
+
+2. **Lack of temporal dynamics**: Perceptrons process inputs instantaneously, without considering the temporal aspects of neural processing. Biological neurons, on the other hand, exhibit complex temporal dynamics due to the presence of voltage-gated ion channels and dendritic spikes (see [Voltage-gated Ion Channels](/the-role-of-dendrites-in-neural-computations/voltage-gated-ion-channels)).
+
+3. **Simplified neuron structure**: The perceptron model treats neurons as simple processing units, ignoring the intricate structure and computational capabilities of dendrites. As discussed in [The Role of Dendrites in Neural Computations](/the-role-of-dendrites-in-neural-computations), dendrites play a crucial role in enabling complex computations in individual neurons.
+
+## From Perceptrons to Deep Neural Networks
+
+Despite its limitations, the perceptron laid the foundation for the development of more advanced artificial neural networks. By stacking multiple layers of perceptrons and introducing non-linear activation functions, researchers created deep neural networks capable of learning complex patterns and solving non-linearly separable problems.
+
+However, as shown in [Modeling Single Neurons as Deep Neural Networks](/modeling-single-neurons-as-deep-neural-networks), even these sophisticated models may not fully capture the computational complexity of individual biological neurons. Understanding the intricate workings of dendrites and their role in neural computations is crucial for bridging the gap between artificial and biological neural networks.

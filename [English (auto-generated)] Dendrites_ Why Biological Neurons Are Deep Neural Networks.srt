@@ -1,0 +1,2476 @@
+1
+00:00:00,480 --> 00:00:03,659
+the year 2022 which has recently passed
+
+2
+00:00:03,659 --> 00:00:06,540
+can easily be called the year of neural
+
+3
+00:00:06,540 --> 00:00:09,000
+networks after all we got a language
+
+4
+00:00:09,000 --> 00:00:11,340
+model which can write you a surprisingly
+
+5
+00:00:11,340 --> 00:00:15,360
+decent assay an AI art generator and
+
+6
+00:00:15,360 --> 00:00:17,580
+even a platform which turns any image
+
+7
+00:00:17,580 --> 00:00:20,520
+into anime all of this was made possible
+
+8
+00:00:20,520 --> 00:00:23,220
+by the development of artificial neural
+
+9
+00:00:23,220 --> 00:00:25,619
+networks a type of computing system
+
+10
+00:00:25,619 --> 00:00:28,260
+modeled as a network of interconnected
+
+11
+00:00:28,260 --> 00:00:31,019
+nodes which can learn to solve problems
+
+12
+00:00:31,019 --> 00:00:34,200
+by recognizing patterns hidden in the
+
+13
+00:00:34,200 --> 00:00:36,899
+training data and if you go online and
+
+14
+00:00:36,899 --> 00:00:39,480
+Google artificial neural networks you
+
+15
+00:00:39,480 --> 00:00:41,520
+are likely to see statements such as
+
+16
+00:00:41,520 --> 00:00:43,860
+they work pretty much like your brain
+
+17
+00:00:43,860 --> 00:00:45,719
+well you see such claims although
+
+18
+00:00:45,719 --> 00:00:48,239
+attractive can be a bit misleading
+
+19
+00:00:48,239 --> 00:00:50,940
+because biological neurons are actually
+
+20
+00:00:50,940 --> 00:00:52,680
+much more powerful than it was
+
+21
+00:00:52,680 --> 00:00:54,059
+previously thought
+
+22
+00:00:54,059 --> 00:00:57,239
+in this video we will see why individual
+
+23
+00:00:57,239 --> 00:00:59,280
+neurons in your brain function
+
+24
+00:00:59,280 --> 00:01:01,920
+essentially like full-blown neural
+
+25
+00:01:01,920 --> 00:01:04,739
+networks themselves equipped with insane
+
+26
+00:01:04,739 --> 00:01:07,439
+information processing capabilities as
+
+27
+00:01:07,439 --> 00:01:08,820
+well as some of the physiological
+
+28
+00:01:08,820 --> 00:01:10,979
+mechanisms that account for this
+
+29
+00:01:10,979 --> 00:01:13,020
+computational complexity if you're
+
+30
+00:01:13,020 --> 00:01:16,340
+interested stay tuned
+
+31
+00:01:21,780 --> 00:01:23,759
+before we begin I'd like to warn you
+
+32
+00:01:23,759 --> 00:01:25,860
+that this video is not on artificial
+
+33
+00:01:25,860 --> 00:01:28,259
+neural networks per se we're not going
+
+34
+00:01:28,259 --> 00:01:29,939
+to talk about back propagation or
+
+35
+00:01:29,939 --> 00:01:32,640
+gradient descent or any of that stuff in
+
+36
+00:01:32,640 --> 00:01:34,619
+detail but we are going to talk about
+
+37
+00:01:34,619 --> 00:01:36,240
+their relationship with biological
+
+38
+00:01:36,240 --> 00:01:38,280
+neurons as well as some of the
+
+39
+00:01:38,280 --> 00:01:41,040
+applications to Modern Neuroscience but
+
+40
+00:01:41,040 --> 00:01:43,439
+more on that later early neural networks
+
+41
+00:01:43,439 --> 00:01:46,079
+were indeed inspired by the descriptions
+
+42
+00:01:46,079 --> 00:01:48,060
+of biological neurons which people
+
+43
+00:01:48,060 --> 00:01:50,700
+thought to be accurate at the time in
+
+44
+00:01:50,700 --> 00:01:52,799
+fact the birth of machine learning as we
+
+45
+00:01:52,799 --> 00:01:56,220
+know it can be traced back to 1943 when
+
+46
+00:01:56,220 --> 00:01:58,380
+Walter Pitts and Warren McCulloch
+
+47
+00:01:58,380 --> 00:02:00,899
+introduced the notion of a perceptron
+
+48
+00:02:00,899 --> 00:02:03,540
+despite the fancy name the idea is quite
+
+49
+00:02:03,540 --> 00:02:04,380
+simple
+
+50
+00:02:04,380 --> 00:02:06,659
+the perceptron was created to function
+
+51
+00:02:06,659 --> 00:02:09,239
+like an individual nerve cell which in
+
+52
+00:02:09,239 --> 00:02:11,099
+this Doctrine works like a simple
+
+53
+00:02:11,099 --> 00:02:13,920
+summator and comparator this just means
+
+54
+00:02:13,920 --> 00:02:15,780
+that it receives the an input set of
+
+55
+00:02:15,780 --> 00:02:18,000
+numbers multiplies them by some
+
+56
+00:02:18,000 --> 00:02:20,879
+coefficients also called weights sums
+
+57
+00:02:20,879 --> 00:02:23,099
+everything together and compares the
+
+58
+00:02:23,099 --> 00:02:25,680
+result with a threshold if the resulting
+
+59
+00:02:25,680 --> 00:02:27,900
+value exceeds the threshold the
+
+60
+00:02:27,900 --> 00:02:29,879
+perceptron sends a number one as an
+
+61
+00:02:29,879 --> 00:02:31,860
+output to its neighbors
+
+62
+00:02:31,860 --> 00:02:33,959
+you interconnect a bunch of these
+
+63
+00:02:33,959 --> 00:02:35,940
+perceptrons with each other such that
+
+64
+00:02:35,940 --> 00:02:38,220
+the output of one serves as an input to
+
+65
+00:02:38,220 --> 00:02:40,920
+a downstream perceptron include an input
+
+66
+00:02:40,920 --> 00:02:43,379
+and output layer and boom you got a
+
+67
+00:02:43,379 --> 00:02:45,480
+neural network and to train the network
+
+68
+00:02:45,480 --> 00:02:48,480
+means to somehow adjust the values of
+
+69
+00:02:48,480 --> 00:02:51,120
+these input weights to make it match an
+
+70
+00:02:51,120 --> 00:02:53,459
+input to a correct output
+
+71
+00:02:53,459 --> 00:02:55,560
+but at that point the fields of machine
+
+72
+00:02:55,560 --> 00:02:57,599
+learning and neurobiology pretty much
+
+73
+00:02:57,599 --> 00:02:58,680
+Leverage
+
+74
+00:02:58,680 --> 00:03:01,440
+over the years people have invented a
+
+75
+00:03:01,440 --> 00:03:04,019
+bunch of activation functions organized
+
+76
+00:03:04,019 --> 00:03:05,819
+neurons in a multitude of different
+
+77
+00:03:05,819 --> 00:03:08,040
+network architectures came up with
+
+78
+00:03:08,040 --> 00:03:09,720
+algorithms to change the weights
+
+79
+00:03:09,720 --> 00:03:12,000
+efficiently and so much more but because
+
+80
+00:03:12,000 --> 00:03:14,220
+we still refer to the nodes in such
+
+81
+00:03:14,220 --> 00:03:17,099
+networks as neurons a lot of people
+
+82
+00:03:17,099 --> 00:03:19,980
+believe that biological neurons in the
+
+83
+00:03:19,980 --> 00:03:22,620
+brain function exactly like their
+
+84
+00:03:22,620 --> 00:03:24,900
+perceptron counterparts the main goal of
+
+85
+00:03:24,900 --> 00:03:27,120
+this video is to exonerate biological
+
+86
+00:03:27,120 --> 00:03:29,819
+neurons and show that single cells are
+
+87
+00:03:29,819 --> 00:03:31,680
+much more computationally powerful and
+
+88
+00:03:31,680 --> 00:03:34,080
+sophisticated than you might think but
+
+89
+00:03:34,080 --> 00:03:35,400
+to understand the computational
+
+90
+00:03:35,400 --> 00:03:38,220
+complexity of a neuron it's helpful to
+
+91
+00:03:38,220 --> 00:03:40,500
+remind ourselves of the basic biology
+
+92
+00:03:40,500 --> 00:03:43,620
+behind neural computations if you open
+
+93
+00:03:43,620 --> 00:03:46,140
+any Neuroscience textbook one of the
+
+94
+00:03:46,140 --> 00:03:48,060
+first things you'll see is the structure
+
+95
+00:03:48,060 --> 00:03:50,519
+of a typical neuron usually consisting
+
+96
+00:03:50,519 --> 00:03:53,760
+of the dendrites Soma or cell body and
+
+97
+00:03:53,760 --> 00:03:55,019
+in Axon
+
+98
+00:03:55,019 --> 00:03:57,840
+let's put dendrites aside from now as
+
+99
+00:03:57,840 --> 00:04:01,200
+they will become key players later on
+
+100
+00:04:01,200 --> 00:04:03,360
+you probably know the key property of
+
+101
+00:04:03,360 --> 00:04:05,580
+neurons is that they are electrically
+
+102
+00:04:05,580 --> 00:04:08,220
+excitable cells which means they have
+
+103
+00:04:08,220 --> 00:04:10,200
+the capacity to generate brief
+
+104
+00:04:10,200 --> 00:04:13,140
+electrical pulses that are propagated to
+
+105
+00:04:13,140 --> 00:04:15,720
+other neurons forming a basis of
+
+106
+00:04:15,720 --> 00:04:18,120
+communication between cells in
+
+107
+00:04:18,120 --> 00:04:20,699
+biological systems electric charge is
+
+108
+00:04:20,699 --> 00:04:23,699
+carried by ions such as sodium potassium
+
+109
+00:04:23,699 --> 00:04:26,220
+chloride and calcium which are floating
+
+110
+00:04:26,220 --> 00:04:28,740
+both inside and outside the cells in
+
+111
+00:04:28,740 --> 00:04:30,360
+different proportions
+
+112
+00:04:30,360 --> 00:04:32,220
+cells are separated from the outside
+
+113
+00:04:32,220 --> 00:04:35,100
+world by a lipid membrane a barrier
+
+114
+00:04:35,100 --> 00:04:38,040
+normally impermeable to ions however
+
+115
+00:04:38,040 --> 00:04:41,160
+neurons possess special proteins forming
+
+116
+00:04:41,160 --> 00:04:43,680
+channels through which specific ions can
+
+117
+00:04:43,680 --> 00:04:45,840
+cross the membrane and which can open
+
+118
+00:04:45,840 --> 00:04:47,759
+and close through a variety of
+
+119
+00:04:47,759 --> 00:04:50,340
+mechanisms as we'll see further
+
+120
+00:04:50,340 --> 00:04:52,740
+so by regulating the flow of ions
+
+121
+00:04:52,740 --> 00:04:55,620
+through the shells cells can control the
+
+122
+00:04:55,620 --> 00:04:58,080
+balance of electric charges and thus
+
+123
+00:04:58,080 --> 00:05:01,080
+control the membrane voltage namely when
+
+124
+00:05:01,080 --> 00:05:04,320
+positive ions flow into the cell they
+
+125
+00:05:04,320 --> 00:05:06,380
+are said to depolarize the membrane
+
+126
+00:05:06,380 --> 00:05:08,820
+increasing the voltage making the
+
+127
+00:05:08,820 --> 00:05:11,340
+potential more positive and vice versa
+
+128
+00:05:11,340 --> 00:05:13,500
+for negative ions
+
+129
+00:05:13,500 --> 00:05:16,620
+from the whole zoo of ion channels we'll
+
+130
+00:05:16,620 --> 00:05:18,660
+be mostly interested in What's called
+
+131
+00:05:18,660 --> 00:05:21,060
+the voltage-gated channels which can
+
+132
+00:05:21,060 --> 00:05:23,759
+open and close depending on the value of
+
+133
+00:05:23,759 --> 00:05:26,600
+membrane potential
+
+134
+00:05:26,940 --> 00:05:28,919
+in school we usually learn about
+
+135
+00:05:28,919 --> 00:05:31,259
+voltage-gated channels in the context of
+
+136
+00:05:31,259 --> 00:05:33,720
+action potential generation so just to
+
+137
+00:05:33,720 --> 00:05:35,820
+remind ourselves an action potential
+
+138
+00:05:35,820 --> 00:05:38,400
+which is the unit of communication is
+
+139
+00:05:38,400 --> 00:05:41,280
+often said to be all or none output of a
+
+140
+00:05:41,280 --> 00:05:43,979
+neuron in a simplified description it is
+
+141
+00:05:43,979 --> 00:05:46,740
+generated at the origin of an axon where
+
+142
+00:05:46,740 --> 00:05:48,479
+there is a large number of special
+
+143
+00:05:48,479 --> 00:05:51,300
+sodium channels that open when the
+
+144
+00:05:51,300 --> 00:05:53,160
+membrane voltage exceeds a certain
+
+145
+00:05:53,160 --> 00:05:55,740
+threshold because sodium is a positively
+
+146
+00:05:55,740 --> 00:05:58,500
+charged ion when it rushes into the cell
+
+147
+00:05:58,500 --> 00:06:00,840
+the membrane gets depolarized even
+
+148
+00:06:00,840 --> 00:06:03,840
+further recruiting more sodium channels
+
+149
+00:06:03,840 --> 00:06:06,120
+to open and so forth like a positive
+
+150
+00:06:06,120 --> 00:06:08,580
+feedback loop that wave of sodium
+
+151
+00:06:08,580 --> 00:06:11,460
+channels opening up is transmitted along
+
+152
+00:06:11,460 --> 00:06:14,880
+the axon and gets indirectly passed onto
+
+153
+00:06:14,880 --> 00:06:16,800
+other neurons by the means of synaptic
+
+154
+00:06:16,800 --> 00:06:19,500
+transmission however sodium channels
+
+155
+00:06:19,500 --> 00:06:21,840
+don't stay open forever and eventually
+
+156
+00:06:21,840 --> 00:06:24,479
+they close well another type of channels
+
+157
+00:06:24,479 --> 00:06:27,780
+opens allowing potassium also a
+
+158
+00:06:27,780 --> 00:06:30,500
+positively charged ion to leave the cell
+
+159
+00:06:30,500 --> 00:06:33,180
+bringing the membrane voltage back to
+
+160
+00:06:33,180 --> 00:06:34,620
+its resting level
+
+161
+00:06:34,620 --> 00:06:37,740
+ta-da we have just generated an action
+
+162
+00:06:37,740 --> 00:06:39,840
+potential and sent one bit of
+
+163
+00:06:39,840 --> 00:06:42,720
+information to Downstream neurons you
+
+164
+00:06:42,720 --> 00:06:44,520
+might already see why the initial
+
+165
+00:06:44,520 --> 00:06:46,380
+description of a neuron as a perceptron
+
+166
+00:06:46,380 --> 00:06:48,000
+seemed reasonable
+
+167
+00:06:48,000 --> 00:06:50,340
+after all we have just witnessed how a
+
+168
+00:06:50,340 --> 00:06:52,860
+thresholding function is implemented in
+
+169
+00:06:52,860 --> 00:06:55,020
+a neuron through voltage-gated channels
+
+170
+00:06:55,020 --> 00:06:58,080
+so that part is accurate right indeed
+
+171
+00:06:58,080 --> 00:07:00,419
+the main problem with the perceptron is
+
+172
+00:07:00,419 --> 00:07:02,759
+mostly with inputs not the output it
+
+173
+00:07:02,759 --> 00:07:04,560
+it's time for us to get back to the
+
+174
+00:07:04,560 --> 00:07:06,960
+dendrites we've been putting off and see
+
+175
+00:07:06,960 --> 00:07:09,240
+how exactly they contribute to the
+
+176
+00:07:09,240 --> 00:07:11,940
+computations on incoming information now
+
+177
+00:07:11,940 --> 00:07:13,860
+the weight is often presented and this
+
+178
+00:07:13,860 --> 00:07:15,720
+is the way I was taught is that dead
+
+179
+00:07:15,720 --> 00:07:18,000
+rights function like passive receivers
+
+180
+00:07:18,000 --> 00:07:19,919
+of information
+
+181
+00:07:19,919 --> 00:07:21,960
+you see this signal is transmitted
+
+182
+00:07:21,960 --> 00:07:24,360
+between the two cells when the action of
+
+183
+00:07:24,360 --> 00:07:26,699
+one neuron forms a special connection a
+
+184
+00:07:26,699 --> 00:07:28,740
+synapse with a dendrite of another
+
+185
+00:07:28,740 --> 00:07:31,259
+neuron upon the action potential of a
+
+186
+00:07:31,259 --> 00:07:34,259
+sender neuron or pre-synaptic cell there
+
+187
+00:07:34,259 --> 00:07:37,020
+is a chain of chemical reactions which
+
+188
+00:07:37,020 --> 00:07:39,180
+leads to a release of signal molecules
+
+189
+00:07:39,180 --> 00:07:41,819
+and eventually resulting in the opening
+
+190
+00:07:41,819 --> 00:07:44,340
+of neurotransmitter gated ion channels
+
+191
+00:07:44,340 --> 00:07:46,580
+on the membrane of the receiver
+
+192
+00:07:46,580 --> 00:07:49,500
+postsynaptic neuron this flux of ions
+
+193
+00:07:49,500 --> 00:07:51,479
+across the membrane of our postsynaptic
+
+194
+00:07:51,479 --> 00:07:54,479
+cell leads to its depolarization which
+
+195
+00:07:54,479 --> 00:07:56,639
+is propagated along the dendritic tree
+
+196
+00:07:56,639 --> 00:07:58,979
+and the laws of such propagation of
+
+197
+00:07:58,979 --> 00:08:01,080
+electrical signals in passive membrane
+
+198
+00:08:01,080 --> 00:08:04,020
+is conventionally described by a cable
+
+199
+00:08:04,020 --> 00:08:05,400
+Theory
+
+200
+00:08:05,400 --> 00:08:08,280
+in that Paradigm the dendrites are just
+
+201
+00:08:08,280 --> 00:08:11,039
+that cables whose only job is to
+
+202
+00:08:11,039 --> 00:08:13,500
+transmit electrical signals to the Suma
+
+203
+00:08:13,500 --> 00:08:15,740
+for those of you who are more interested
+
+204
+00:08:15,740 --> 00:08:18,000
+dendrites are actually treated as
+
+205
+00:08:18,000 --> 00:08:21,419
+imperfect leaky cables since a single
+
+206
+00:08:21,419 --> 00:08:24,300
+portion of a dendrite is described as a
+
+207
+00:08:24,300 --> 00:08:26,220
+patch of lipid membrane with capacitive
+
+208
+00:08:26,220 --> 00:08:28,639
+properties and a resistive component
+
+209
+00:08:28,639 --> 00:08:31,680
+corresponding to a leak of ions through
+
+210
+00:08:31,680 --> 00:08:35,458
+passive permanently open ion channels as
+
+211
+00:08:35,458 --> 00:08:37,919
+a result the depolarization level is
+
+212
+00:08:37,919 --> 00:08:40,500
+attenuated as it travels along the
+
+213
+00:08:40,500 --> 00:08:43,140
+dendrite in other words the function of
+
+214
+00:08:43,140 --> 00:08:46,020
+dendrites is reduced to summing the
+
+215
+00:08:46,020 --> 00:08:48,480
+incoming signals where the weight of a
+
+216
+00:08:48,480 --> 00:08:50,700
+synaptic input is determined by the
+
+217
+00:08:50,700 --> 00:08:53,700
+amount of receptors and how far away the
+
+218
+00:08:53,700 --> 00:08:56,220
+synapse is from the cell body
+
+219
+00:08:56,220 --> 00:08:58,560
+together with the threshold happening at
+
+220
+00:08:58,560 --> 00:09:00,959
+the Soma this gives us the biological
+
+221
+00:09:00,959 --> 00:09:03,420
+basis for the perceptron model
+
+222
+00:09:03,420 --> 00:09:05,700
+however as neuroscientists studied the
+
+223
+00:09:05,700 --> 00:09:08,279
+cells more closely it became clear that
+
+224
+00:09:08,279 --> 00:09:10,320
+dendrites are anything but passive
+
+225
+00:09:10,320 --> 00:09:12,540
+cables and the reason for that is that
+
+226
+00:09:12,540 --> 00:09:15,240
+apart from permanently open passive ion
+
+227
+00:09:15,240 --> 00:09:17,220
+channels which give them their leaky
+
+228
+00:09:17,220 --> 00:09:20,700
+properties dendrites are also covered by
+
+229
+00:09:20,700 --> 00:09:23,160
+a myriad of voltage-gated ion channels
+
+230
+00:09:23,160 --> 00:09:25,860
+which equip the dendritic tree with
+
+231
+00:09:25,860 --> 00:09:27,480
+powerful information processing
+
+232
+00:09:27,480 --> 00:09:29,820
+capabilities even more powerful than
+
+233
+00:09:29,820 --> 00:09:33,240
+this Soma itself for example dendrites
+
+234
+00:09:33,240 --> 00:09:35,220
+actually contain voltage-gated sodium
+
+235
+00:09:35,220 --> 00:09:37,560
+channels similar to the ones found on
+
+236
+00:09:37,560 --> 00:09:40,680
+the Axon they allow action potentials to
+
+237
+00:09:40,680 --> 00:09:43,019
+travel in Reverse Direction and
+
+238
+00:09:43,019 --> 00:09:45,300
+influence the postsynaptic sites
+
+239
+00:09:45,300 --> 00:09:47,940
+this is called back propagation and it
+
+240
+00:09:47,940 --> 00:09:49,680
+plays an important role in synaptic
+
+241
+00:09:49,680 --> 00:09:51,899
+plasticity adjusting the weights of
+
+242
+00:09:51,899 --> 00:09:55,080
+inputs fast sodium channels also give
+
+243
+00:09:55,080 --> 00:09:57,360
+dendrites an ability to generate their
+
+244
+00:09:57,360 --> 00:09:59,640
+own small action potential like
+
+245
+00:09:59,640 --> 00:10:02,459
+depolarizations which can transiently
+
+246
+00:10:02,459 --> 00:10:06,019
+amplify synaptic inputs
+
+247
+00:10:08,160 --> 00:10:10,320
+another important type of channel is
+
+248
+00:10:10,320 --> 00:10:13,200
+nmda receptor which requires both
+
+249
+00:10:13,200 --> 00:10:15,779
+sufficient membrane depolarization and
+
+250
+00:10:15,779 --> 00:10:17,880
+the presence of neurotransmitter to open
+
+251
+00:10:17,880 --> 00:10:19,920
+thus functioning like a kind of
+
+252
+00:10:19,920 --> 00:10:22,260
+coincidence detector
+
+253
+00:10:22,260 --> 00:10:25,580
+nmda channel is non-selective to cations
+
+254
+00:10:25,580 --> 00:10:29,399
+allowing both calcium and sodium to flow
+
+255
+00:10:29,399 --> 00:10:31,440
+into the cells which has great
+
+256
+00:10:31,440 --> 00:10:33,540
+implications for things like synaptic
+
+257
+00:10:33,540 --> 00:10:35,100
+plasticity
+
+258
+00:10:35,100 --> 00:10:38,220
+this depolarizing event is often called
+
+259
+00:10:38,220 --> 00:10:40,200
+an nmda Spike
+
+260
+00:10:40,200 --> 00:10:43,800
+unlike pure sodium spikelets these are
+
+261
+00:10:43,800 --> 00:10:46,079
+generated by the influx of calcium as
+
+262
+00:10:46,079 --> 00:10:48,899
+well and are characterized by a much
+
+263
+00:10:48,899 --> 00:10:50,760
+longer time scale of hundreds of
+
+264
+00:10:50,760 --> 00:10:52,920
+milliseconds importantly to our
+
+265
+00:10:52,920 --> 00:10:55,980
+discussion nmda channels allow the
+
+266
+00:10:55,980 --> 00:10:58,380
+dendrites to perform non-linear
+
+267
+00:10:58,380 --> 00:11:01,440
+integration of incoming information
+
+268
+00:11:01,440 --> 00:11:03,660
+this equips dendrites with vast
+
+269
+00:11:03,660 --> 00:11:06,079
+computational complexity for example
+
+270
+00:11:06,079 --> 00:11:09,000
+dendrites can discriminate the order of
+
+271
+00:11:09,000 --> 00:11:11,579
+incoming Action potentials this means
+
+272
+00:11:11,579 --> 00:11:13,860
+that if you took a group of synapses on
+
+273
+00:11:13,860 --> 00:11:15,480
+a dendrite of a cortical pyramidal
+
+274
+00:11:15,480 --> 00:11:18,240
+neuron then a sequential activation of
+
+275
+00:11:18,240 --> 00:11:20,820
+them in one direction will produce a
+
+276
+00:11:20,820 --> 00:11:23,100
+fundamentally different electrical and
+
+277
+00:11:23,100 --> 00:11:25,560
+chemical response than activation in
+
+278
+00:11:25,560 --> 00:11:27,899
+Reverse Direction and this is sensitive
+
+279
+00:11:27,899 --> 00:11:30,120
+not only to order but also to the
+
+280
+00:11:30,120 --> 00:11:31,920
+velocity of activation
+
+281
+00:11:31,920 --> 00:11:35,040
+thus single neurons have a mechanism to
+
+282
+00:11:35,040 --> 00:11:37,740
+process temporal patterns and generate
+
+283
+00:11:37,740 --> 00:11:40,019
+sequence selective output
+
+284
+00:11:40,019 --> 00:11:42,540
+nmd Spikes have also been shown to
+
+285
+00:11:42,540 --> 00:11:45,000
+enhance stimulus selectivity in the
+
+286
+00:11:45,000 --> 00:11:47,339
+visual cortex of awake animals
+
+287
+00:11:47,339 --> 00:11:49,500
+thus contributing to behaviorally
+
+288
+00:11:49,500 --> 00:11:51,839
+relevant neural computations in the
+
+289
+00:11:51,839 --> 00:11:54,180
+intact brain if you're interested in
+
+290
+00:11:54,180 --> 00:11:55,860
+learning more about this paper and the
+
+291
+00:11:55,860 --> 00:11:58,860
+key result I have a dedicated short clip
+
+292
+00:11:58,860 --> 00:12:01,440
+available for my patreon supporters
+
+293
+00:12:01,440 --> 00:12:03,060
+if you would like to support the Channel
+
+294
+00:12:03,060 --> 00:12:05,040
+vote for video topics and enjoy the
+
+295
+00:12:05,040 --> 00:12:06,959
+bonus content you can find more
+
+296
+00:12:06,959 --> 00:12:08,700
+information by following the link in the
+
+297
+00:12:08,700 --> 00:12:10,920
+description but today I'd like to focus
+
+298
+00:12:10,920 --> 00:12:12,300
+on something different
+
+299
+00:12:12,300 --> 00:12:15,000
+what if I told you that certain neurons
+
+300
+00:12:15,000 --> 00:12:17,399
+in the human cortex are capable of
+
+301
+00:12:17,399 --> 00:12:19,920
+performing a type of computation that
+
+302
+00:12:19,920 --> 00:12:22,320
+was previously thought to require a
+
+303
+00:12:22,320 --> 00:12:24,120
+multi-layered neural network to
+
+304
+00:12:24,120 --> 00:12:27,360
+implement indeed in 2020 a group of
+
+305
+00:12:27,360 --> 00:12:29,399
+researchers from the laboratory led by
+
+306
+00:12:29,399 --> 00:12:32,399
+Matthew larcom published a paper titled
+
+307
+00:12:32,399 --> 00:12:34,260
+dendritic Action potentials and
+
+308
+00:12:34,260 --> 00:12:37,079
+computation in human layer 2-3 cortical
+
+309
+00:12:37,079 --> 00:12:40,440
+neurons where they demonstrated a unique
+
+310
+00:12:40,440 --> 00:12:43,500
+property of human pyramidal neurons
+
+311
+00:12:43,500 --> 00:12:45,839
+more specifically they performed
+
+312
+00:12:45,839 --> 00:12:48,000
+simultaneous recordings of electrical
+
+313
+00:12:48,000 --> 00:12:50,160
+activity at the cell body and the
+
+314
+00:12:50,160 --> 00:12:52,620
+dendrite and found a new type of
+
+315
+00:12:52,620 --> 00:12:55,260
+electrical response that was initiated
+
+316
+00:12:55,260 --> 00:12:57,660
+at the dendrites by a sufficiently
+
+317
+00:12:57,660 --> 00:13:00,240
+strong excitatory inputs
+
+318
+00:13:00,240 --> 00:13:03,000
+this waveform was termed as dendritic
+
+319
+00:13:03,000 --> 00:13:05,579
+calcium action potential as the name
+
+320
+00:13:05,579 --> 00:13:08,100
+suggests such electrical events are
+
+321
+00:13:08,100 --> 00:13:11,399
+caused by the influx of calcium ions but
+
+322
+00:13:11,399 --> 00:13:14,040
+have a shorter time scale compared to
+
+323
+00:13:14,040 --> 00:13:15,680
+nmd spikes
+
+324
+00:13:15,680 --> 00:13:19,079
+remarkably these calcium spikes which
+
+325
+00:13:19,079 --> 00:13:20,579
+have not been described in other
+
+326
+00:13:20,579 --> 00:13:23,459
+mammalian species are highly selective
+
+327
+00:13:23,459 --> 00:13:26,880
+to a particular input strength this
+
+328
+00:13:26,880 --> 00:13:28,920
+means that if you stimulate a neuron
+
+329
+00:13:28,920 --> 00:13:31,500
+with too weak of a current the membrane
+
+330
+00:13:31,500 --> 00:13:34,019
+voltage would stay below the threshold
+
+331
+00:13:34,019 --> 00:13:37,560
+for opening of calcium channels so no
+
+332
+00:13:37,560 --> 00:13:39,959
+dendritic spikes would be observed
+
+333
+00:13:39,959 --> 00:13:42,959
+if however you increase the current too
+
+334
+00:13:42,959 --> 00:13:45,480
+much no spikes would be observed either
+
+335
+00:13:45,480 --> 00:13:47,760
+you would need to provide the dendrite
+
+336
+00:13:47,760 --> 00:13:49,920
+with just the right strength of
+
+337
+00:13:49,920 --> 00:13:52,680
+stimulation to trigger them this fact
+
+338
+00:13:52,680 --> 00:13:54,540
+may not seem like a big deal at first
+
+339
+00:13:54,540 --> 00:13:57,000
+but it's really important for the way we
+
+340
+00:13:57,000 --> 00:13:59,160
+should treat biological neurons
+
+341
+00:13:59,160 --> 00:14:01,320
+to better understand what it really
+
+342
+00:14:01,320 --> 00:14:03,720
+means for the neural computations let's
+
+343
+00:14:03,720 --> 00:14:06,120
+talk about logical operations
+
+344
+00:14:06,120 --> 00:14:08,220
+as you probably know the device you're
+
+345
+00:14:08,220 --> 00:14:10,139
+watching this on stores the information
+
+346
+00:14:10,139 --> 00:14:12,959
+in bits binary units with only two
+
+347
+00:14:12,959 --> 00:14:16,079
+possible States zero and one oh and by
+
+348
+00:14:16,079 --> 00:14:18,300
+the way I will use terms 0 and 1 and
+
+349
+00:14:18,300 --> 00:14:19,920
+false and true interchangeably
+
+350
+00:14:19,920 --> 00:14:21,660
+throughout the rest of the video
+
+351
+00:14:21,660 --> 00:14:24,000
+to perform computations on binary data
+
+352
+00:14:24,000 --> 00:14:26,160
+computers use what are called bitwise
+
+353
+00:14:26,160 --> 00:14:28,440
+operations which are like addition and
+
+354
+00:14:28,440 --> 00:14:30,959
+multiplication but in binary world
+
+355
+00:14:30,959 --> 00:14:33,540
+they are performing by logic gates which
+
+356
+00:14:33,540 --> 00:14:35,160
+are the building blocks of all the
+
+357
+00:14:35,160 --> 00:14:37,320
+digital Hardware individual logic gates
+
+358
+00:14:37,320 --> 00:14:39,899
+perform simple Boolean operations which
+
+359
+00:14:39,899 --> 00:14:42,060
+you have probably heard about with the
+
+360
+00:14:42,060 --> 00:14:44,699
+two most popular ones being and and or
+
+361
+00:14:44,699 --> 00:14:46,800
+operations
+
+362
+00:14:46,800 --> 00:14:50,040
+for example the anti gate receives two
+
+363
+00:14:50,040 --> 00:14:53,100
+inputs and outputs one if and only if
+
+364
+00:14:53,100 --> 00:14:55,560
+both of the inputs are one
+
+365
+00:14:55,560 --> 00:14:59,100
+while the or gate outputs one when at
+
+366
+00:14:59,100 --> 00:15:01,440
+least one of the inputs is equal to one
+
+367
+00:15:01,440 --> 00:15:04,139
+this is also known as inclusive or
+
+368
+00:15:04,139 --> 00:15:07,800
+because the output is true when both of
+
+369
+00:15:07,800 --> 00:15:09,839
+the inputs are true as well
+
+370
+00:15:09,839 --> 00:15:12,720
+so if we view the inputs as Venn
+
+371
+00:15:12,720 --> 00:15:15,959
+diagrams the intersection is included
+
+372
+00:15:15,959 --> 00:15:18,000
+there is another useful operation which
+
+373
+00:15:18,000 --> 00:15:20,940
+is called exclusive or or xor for short
+
+374
+00:15:20,940 --> 00:15:24,600
+as the name suggests the xorgate outputs
+
+375
+00:15:24,600 --> 00:15:27,779
+true when exactly one of the inputs is
+
+376
+00:15:27,779 --> 00:15:30,240
+true but not both
+
+377
+00:15:30,240 --> 00:15:32,639
+by the way notice that this agrees with
+
+378
+00:15:32,639 --> 00:15:34,740
+our everyday interpretation of the word
+
+379
+00:15:34,740 --> 00:15:35,579
+or
+
+380
+00:15:35,579 --> 00:15:37,740
+when we say things like would you like a
+
+381
+00:15:37,740 --> 00:15:40,380
+cup of coffee or tea the word or is
+
+382
+00:15:40,380 --> 00:15:42,240
+usually understood in the exclusive
+
+383
+00:15:42,240 --> 00:15:43,320
+sense
+
+384
+00:15:43,320 --> 00:15:46,019
+and in computers soar can be used for
+
+385
+00:15:46,019 --> 00:15:48,240
+things like comparing two numbers
+
+386
+00:15:48,240 --> 00:15:50,339
+importantly to our today's discussion
+
+387
+00:15:50,339 --> 00:15:52,800
+xor is what's called a linearly
+
+388
+00:15:52,800 --> 00:15:54,899
+non-separable function
+
+389
+00:15:54,899 --> 00:15:57,660
+and this simply means that there is no
+
+390
+00:15:57,660 --> 00:16:00,300
+line for two Dimensions playing for
+
+391
+00:16:00,300 --> 00:16:02,639
+three dimensions or hyperplane for n
+
+392
+00:16:02,639 --> 00:16:05,459
+Dimensions that would separate different
+
+393
+00:16:05,459 --> 00:16:07,380
+classes of output
+
+394
+00:16:07,380 --> 00:16:09,899
+for example let's consider a perceptron
+
+395
+00:16:09,899 --> 00:16:13,560
+which receives just two inputs similarly
+
+396
+00:16:13,560 --> 00:16:17,220
+to the logic gate call them X and Y as
+
+397
+00:16:17,220 --> 00:16:19,680
+we have discussed earlier all perceptron
+
+398
+00:16:19,680 --> 00:16:22,500
+does is multiply the inputs by their
+
+399
+00:16:22,500 --> 00:16:25,500
+weights adds everything and compares the
+
+400
+00:16:25,500 --> 00:16:28,560
+result with a threshold if we denote the
+
+401
+00:16:28,560 --> 00:16:31,199
+weights As A and B then the perceptron
+
+402
+00:16:31,199 --> 00:16:34,380
+essentially solves the inequality ax
+
+403
+00:16:34,380 --> 00:16:36,839
+plus b y is bigger or equal than
+
+404
+00:16:36,839 --> 00:16:39,120
+threshold but if you consider the
+
+405
+00:16:39,120 --> 00:16:41,220
+geometric representation of this
+
+406
+00:16:41,220 --> 00:16:43,800
+inequality it's easy to see that this is
+
+407
+00:16:43,800 --> 00:16:46,320
+essentially a line separating the two
+
+408
+00:16:46,320 --> 00:16:49,320
+halves of the X Y plane
+
+409
+00:16:49,320 --> 00:16:52,259
+similarly if perceptron had three inputs
+
+410
+00:16:52,259 --> 00:16:55,079
+this equation would correspond to a
+
+411
+00:16:55,079 --> 00:16:58,199
+plane cut in the 3D space into two
+
+412
+00:16:58,199 --> 00:17:00,060
+halves and so forth
+
+413
+00:17:00,060 --> 00:17:03,000
+that's why a single perceptron can
+
+414
+00:17:03,000 --> 00:17:05,880
+function as a classifier when two output
+
+415
+00:17:05,880 --> 00:17:08,760
+classes are located on opposite sides of
+
+416
+00:17:08,760 --> 00:17:11,640
+that line in other words when they are
+
+417
+00:17:11,640 --> 00:17:13,319
+linearly separable
+
+418
+00:17:13,319 --> 00:17:16,260
+returning back to our logic gates the
+
+419
+00:17:16,260 --> 00:17:18,900
+inputs would be limited to 0 and 1. if
+
+420
+00:17:18,900 --> 00:17:21,240
+we visualize the and gate it's easy to
+
+421
+00:17:21,240 --> 00:17:23,819
+see that there is a line separating the
+
+422
+00:17:23,819 --> 00:17:26,339
+true and false outputs so a perceptron
+
+423
+00:17:26,339 --> 00:17:28,860
+can act as an and gate
+
+424
+00:17:28,860 --> 00:17:31,380
+and it is possible to turn it into an or
+
+425
+00:17:31,380 --> 00:17:34,200
+gate just by lowering the threshold the
+
+426
+00:17:34,200 --> 00:17:36,840
+xor gate however is different notice
+
+427
+00:17:36,840 --> 00:17:38,760
+that there is no line that would
+
+428
+00:17:38,760 --> 00:17:41,460
+separate the zero outputs from the ones
+
+429
+00:17:41,460 --> 00:17:44,520
+which makes it a linearly non-separable
+
+430
+00:17:44,520 --> 00:17:46,020
+function
+
+431
+00:17:46,020 --> 00:17:48,840
+this is why to perform the xor operation
+
+432
+00:17:48,840 --> 00:17:52,620
+a multi-layered network is required and
+
+433
+00:17:52,620 --> 00:17:54,120
+it was believed to be true for
+
+434
+00:17:54,120 --> 00:17:56,340
+biological neurons as well that
+
+435
+00:17:56,340 --> 00:17:58,860
+individual cells can't compute the xor
+
+436
+00:17:58,860 --> 00:18:01,559
+function until of course that paper came
+
+437
+00:18:01,559 --> 00:18:02,400
+out
+
+438
+00:18:02,400 --> 00:18:04,860
+remember that they described dendritic
+
+439
+00:18:04,860 --> 00:18:07,380
+spikes showed a prominent cell activity
+
+440
+00:18:07,380 --> 00:18:10,080
+towards the strength of a stimulus so
+
+441
+00:18:10,080 --> 00:18:12,120
+for example let's say the neuron has two
+
+442
+00:18:12,120 --> 00:18:14,700
+sets of synapses A and B
+
+443
+00:18:14,700 --> 00:18:16,740
+when either one of the two sets is
+
+444
+00:18:16,740 --> 00:18:19,380
+activated the excitation is large enough
+
+445
+00:18:19,380 --> 00:18:22,200
+to elicit and dendritic Spike which can
+
+446
+00:18:22,200 --> 00:18:24,299
+propagate to the Soma and Trigger the
+
+447
+00:18:24,299 --> 00:18:27,360
+action potential however if both sets of
+
+448
+00:18:27,360 --> 00:18:29,640
+synapses are activated at the same time
+
+449
+00:18:29,640 --> 00:18:33,000
+the strength of incoming current exceeds
+
+450
+00:18:33,000 --> 00:18:35,039
+the optimal value for the dendritic
+
+451
+00:18:35,039 --> 00:18:37,380
+spike generation and no such event is
+
+452
+00:18:37,380 --> 00:18:40,020
+observed in other words the dendrite
+
+453
+00:18:40,020 --> 00:18:43,260
+just performed the xor operation on A
+
+454
+00:18:43,260 --> 00:18:45,900
+and B inputs how awesome is that for
+
+455
+00:18:45,900 --> 00:18:47,220
+those of you who are curious about the
+
+456
+00:18:47,220 --> 00:18:48,840
+biophysical mechanisms of such
+
+457
+00:18:48,840 --> 00:18:51,059
+sensitivity this largely remains
+
+458
+00:18:51,059 --> 00:18:53,640
+unresolved however through computer
+
+459
+00:18:53,640 --> 00:18:55,980
+simulations the authors were able to
+
+460
+00:18:55,980 --> 00:18:58,200
+show that this property of dendritic
+
+461
+00:18:58,200 --> 00:19:01,140
+action potentials can be explained by a
+
+462
+00:19:01,140 --> 00:19:03,120
+combination of known voltage-gated
+
+463
+00:19:03,120 --> 00:19:05,880
+calcium channels and special potassium
+
+464
+00:19:05,880 --> 00:19:08,280
+channels that are sensitive to both
+
+465
+00:19:08,280 --> 00:19:11,640
+voltage and calcium concentration
+
+466
+00:19:11,640 --> 00:19:13,980
+but if biological neurons are quite
+
+467
+00:19:13,980 --> 00:19:16,200
+complex computational devices on their
+
+468
+00:19:16,200 --> 00:19:16,919
+own
+
+469
+00:19:16,919 --> 00:19:19,080
+how does this fit into the picture of
+
+470
+00:19:19,080 --> 00:19:21,360
+existing neural networks that were
+
+471
+00:19:21,360 --> 00:19:23,039
+developed based on oversimplified
+
+472
+00:19:23,039 --> 00:19:25,260
+assumptions should we just throw
+
+473
+00:19:25,260 --> 00:19:27,960
+everything away and start fresh well I
+
+474
+00:19:27,960 --> 00:19:30,299
+think quite the contrary there is a
+
+475
+00:19:30,299 --> 00:19:32,340
+promising Future For the synthesis of
+
+476
+00:19:32,340 --> 00:19:35,100
+ideas from Modern neuroscience and deep
+
+477
+00:19:35,100 --> 00:19:37,620
+learning in particular I would like to
+
+478
+00:19:37,620 --> 00:19:40,200
+conclude this video by discussing a very
+
+479
+00:19:40,200 --> 00:19:42,900
+elegant paper titled single cortical
+
+480
+00:19:42,900 --> 00:19:45,299
+neurons as deep artificial neural
+
+481
+00:19:45,299 --> 00:19:46,500
+networks
+
+482
+00:19:46,500 --> 00:19:48,539
+the authors asked an interesting
+
+483
+00:19:48,539 --> 00:19:50,720
+question can a deep neural network
+
+484
+00:19:50,720 --> 00:19:52,799
+accurately capture the complex
+
+485
+00:19:52,799 --> 00:19:55,320
+information processing of single neurons
+
+486
+00:19:55,320 --> 00:19:58,919
+in our brains and if so how should this
+
+487
+00:19:58,919 --> 00:20:01,679
+equivalent Network look like to find an
+
+488
+00:20:01,679 --> 00:20:04,400
+answer they first created a detailed
+
+489
+00:20:04,400 --> 00:20:06,840
+biophysically realistic model of a
+
+490
+00:20:06,840 --> 00:20:09,120
+single cortical neuron using a
+
+491
+00:20:09,120 --> 00:20:11,520
+reconstructed morphology and populating
+
+492
+00:20:11,520 --> 00:20:13,320
+it with all sorts of differential
+
+493
+00:20:13,320 --> 00:20:15,720
+equations describing the Dynamics of
+
+494
+00:20:15,720 --> 00:20:18,360
+membrane voltage opening and closing of
+
+495
+00:20:18,360 --> 00:20:20,940
+ion channels of different types fluxes
+
+496
+00:20:20,940 --> 00:20:23,340
+of ions across the membrane and so forth
+
+497
+00:20:23,340 --> 00:20:26,100
+this detailed spatial model was
+
+498
+00:20:26,100 --> 00:20:28,020
+bombarded with this set of incoming
+
+499
+00:20:28,020 --> 00:20:30,780
+inputs and the voltage Trace at the Soma
+
+500
+00:20:30,780 --> 00:20:33,120
+was recorded as the output
+
+501
+00:20:33,120 --> 00:20:35,340
+the authors then trained a deep
+
+502
+00:20:35,340 --> 00:20:37,679
+convolutional neural network with
+
+503
+00:20:37,679 --> 00:20:39,780
+various number of layers
+
+504
+00:20:39,780 --> 00:20:41,940
+to see if it could learn the complex
+
+505
+00:20:41,940 --> 00:20:44,160
+input output relationship of the
+
+506
+00:20:44,160 --> 00:20:46,200
+biophysical model when the network
+
+507
+00:20:46,200 --> 00:20:48,900
+receives the identical set of synaptic
+
+508
+00:20:48,900 --> 00:20:49,919
+inputs
+
+509
+00:20:49,919 --> 00:20:52,919
+as a result they found that it required
+
+510
+00:20:52,919 --> 00:20:55,679
+between 5 and 8 layers to accurately
+
+511
+00:20:55,679 --> 00:20:58,799
+predict output spikes at voltage values
+
+512
+00:20:58,799 --> 00:21:01,460
+of the detailed model
+
+513
+00:21:01,460 --> 00:21:04,559
+interestingly removing nmda channels
+
+514
+00:21:04,559 --> 00:21:06,900
+from the model drastically reduced the
+
+515
+00:21:06,900 --> 00:21:08,520
+complexity of the equivalent Network
+
+516
+00:21:08,520 --> 00:21:11,220
+which now could predict the output with
+
+517
+00:21:11,220 --> 00:21:13,679
+just a single hidden layer this
+
+518
+00:21:13,679 --> 00:21:15,960
+demonstrates the importance of dendritic
+
+519
+00:21:15,960 --> 00:21:19,140
+non-linearalities and nmda channels in
+
+520
+00:21:19,140 --> 00:21:21,539
+particular for equipping neurons with
+
+521
+00:21:21,539 --> 00:21:24,240
+vast computational complexity and
+
+522
+00:21:24,240 --> 00:21:26,340
+surprisingly the Deep neural network
+
+523
+00:21:26,340 --> 00:21:29,159
+that was trained purely on randomly
+
+524
+00:21:29,159 --> 00:21:31,980
+scattered synaptic inputs was able to
+
+525
+00:21:31,980 --> 00:21:34,380
+generalize and could Faithfully predict
+
+526
+00:21:34,380 --> 00:21:37,380
+the output even for spatially clustered
+
+527
+00:21:37,380 --> 00:21:39,480
+and synchronously activated synapses
+
+528
+00:21:39,480 --> 00:21:42,299
+that it had never encountered before
+
+529
+00:21:42,299 --> 00:21:45,179
+so in a way it was able to grasp the
+
+530
+00:21:45,179 --> 00:21:47,039
+underlying biophysics of the neuron
+
+531
+00:21:47,039 --> 00:21:50,340
+which was never explicitly specified
+
+532
+00:21:50,340 --> 00:21:52,860
+so what does this all tell us
+
+533
+00:21:52,860 --> 00:21:55,679
+first of all this study suggests that
+
+534
+00:21:55,679 --> 00:21:58,020
+single cortical neurons with their
+
+535
+00:21:58,020 --> 00:21:59,700
+non-linear dendritic integration
+
+536
+00:21:59,700 --> 00:22:02,580
+properties are indeed sophisticated
+
+537
+00:22:02,580 --> 00:22:05,760
+computational units on their own and
+
+538
+00:22:05,760 --> 00:22:07,799
+this computation is comparable with a
+
+539
+00:22:07,799 --> 00:22:09,539
+multi-layered convolutional network
+
+540
+00:22:09,539 --> 00:22:11,880
+which if you think about it is a pretty
+
+541
+00:22:11,880 --> 00:22:13,620
+mind-blowing thing for a single cell to
+
+542
+00:22:13,620 --> 00:22:16,200
+do it also offers a practical advantage
+
+543
+00:22:16,200 --> 00:22:18,120
+to module individual neurons more
+
+544
+00:22:18,120 --> 00:22:20,820
+efficiently because even the Deep neural
+
+545
+00:22:20,820 --> 00:22:22,620
+network with eight layers
+
+546
+00:22:22,620 --> 00:22:26,280
+is 2 000 times faster than running the
+
+547
+00:22:26,280 --> 00:22:28,919
+detailed model which requires solving a
+
+548
+00:22:28,919 --> 00:22:32,400
+myriad of partial differential equations
+
+549
+00:22:32,400 --> 00:22:34,320
+are you interested in learning more
+
+550
+00:22:34,320 --> 00:22:36,240
+about the topics discussed here such as
+
+551
+00:22:36,240 --> 00:22:37,620
+neural networks and differential
+
+552
+00:22:37,620 --> 00:22:40,440
+equations but not sure where to start
+
+553
+00:22:40,440 --> 00:22:42,480
+well in that case you are definitely
+
+554
+00:22:42,480 --> 00:22:44,400
+going to love our today's sponsor
+
+555
+00:22:44,400 --> 00:22:46,500
+brilliant.org
+
+556
+00:22:46,500 --> 00:22:48,780
+it is a revolutionary educational
+
+557
+00:22:48,780 --> 00:22:51,299
+platform which allows you to advance in
+
+558
+00:22:51,299 --> 00:22:54,059
+stem fields in a fun and engaging way
+
+559
+00:22:54,059 --> 00:22:56,520
+the key feature of brilliant is that you
+
+560
+00:22:56,520 --> 00:22:58,980
+get to learn by doing through exploring
+
+561
+00:22:58,980 --> 00:23:01,320
+interactive demonstrations and solving
+
+562
+00:23:01,320 --> 00:23:03,780
+problems along the way to ensure that
+
+563
+00:23:03,780 --> 00:23:05,700
+you grasp even the most complicated
+
+564
+00:23:05,700 --> 00:23:08,340
+Concepts brilliant offers thousands of
+
+565
+00:23:08,340 --> 00:23:09,720
+lessons of different levels of
+
+566
+00:23:09,720 --> 00:23:11,700
+difficulty from math and computer
+
+567
+00:23:11,700 --> 00:23:13,919
+science fundamentals to things like
+
+568
+00:23:13,919 --> 00:23:15,600
+vector calculus and computational
+
+569
+00:23:15,600 --> 00:23:18,360
+biology and the new ones are being added
+
+570
+00:23:18,360 --> 00:23:21,240
+every month for example if you enjoyed
+
+571
+00:23:21,240 --> 00:23:23,100
+this video then you might be interested
+
+572
+00:23:23,100 --> 00:23:24,960
+in a course on artificial neural
+
+573
+00:23:24,960 --> 00:23:27,600
+networks it covers a lot of Concepts
+
+574
+00:23:27,600 --> 00:23:29,700
+that you have just watched such as the
+
+575
+00:23:29,700 --> 00:23:31,740
+perception models linear separability
+
+576
+00:23:31,740 --> 00:23:33,960
+and convolutional networks in more depth
+
+577
+00:23:33,960 --> 00:23:36,179
+while also diving into more complex
+
+578
+00:23:36,179 --> 00:23:38,280
+topics like the advanced Network
+
+579
+00:23:38,280 --> 00:23:41,100
+architectures don't hesitate to try
+
+580
+00:23:41,100 --> 00:23:42,840
+brilliant and begin growing your
+
+581
+00:23:42,840 --> 00:23:45,299
+knowledge base in bite-sized chunks just
+
+582
+00:23:45,299 --> 00:23:48,000
+by indicating 15 minutes a day follow
+
+583
+00:23:48,000 --> 00:23:49,799
+the link down in the description to get
+
+584
+00:23:49,799 --> 00:23:52,080
+started for free and the first 200
+
+585
+00:23:52,080 --> 00:23:54,559
+people to use it will also get 20 off
+
+586
+00:23:54,559 --> 00:23:56,820
+Brilliance premium annual membership
+
+587
+00:23:56,820 --> 00:23:59,820
+alright let's recap in this video we
+
+588
+00:23:59,820 --> 00:24:01,260
+have seen how the presence of
+
+589
+00:24:01,260 --> 00:24:03,780
+voltage-gated ion channels turns
+
+590
+00:24:03,780 --> 00:24:05,880
+dendrites from being merely passive
+
+591
+00:24:05,880 --> 00:24:08,159
+conductors of electricity to active
+
+592
+00:24:08,159 --> 00:24:11,280
+computational units moreover individual
+
+593
+00:24:11,280 --> 00:24:13,919
+dendritic branches have the capacity to
+
+594
+00:24:13,919 --> 00:24:16,559
+perform exclusive or operation on their
+
+595
+00:24:16,559 --> 00:24:18,960
+inputs a type of computation that was
+
+596
+00:24:18,960 --> 00:24:20,299
+previously thought to require
+
+597
+00:24:20,299 --> 00:24:23,159
+multi-layered networks and finally we
+
+598
+00:24:23,159 --> 00:24:25,860
+have seen how the complex input output
+
+599
+00:24:25,860 --> 00:24:28,020
+transformations of information inside
+
+600
+00:24:28,020 --> 00:24:30,780
+biological neurons require a
+
+601
+00:24:30,780 --> 00:24:32,640
+computational power of a whole
+
+602
+00:24:32,640 --> 00:24:35,100
+convolutional deep neural network
+
+603
+00:24:35,100 --> 00:24:37,440
+so hopefully I was able to convince you
+
+604
+00:24:37,440 --> 00:24:40,320
+that even at level of single cells the
+
+605
+00:24:40,320 --> 00:24:42,299
+brain is incredibly complex and
+
+606
+00:24:42,299 --> 00:24:44,640
+fascinating and that next time you hear
+
+607
+00:24:44,640 --> 00:24:46,860
+statements that individual neurons
+
+608
+00:24:46,860 --> 00:24:48,299
+essentially function like linear
+
+609
+00:24:48,299 --> 00:24:50,460
+summaters you will take those claims
+
+610
+00:24:50,460 --> 00:24:52,380
+with a grain of salt if you liked the
+
+611
+00:24:52,380 --> 00:24:53,580
+video share it with your friends
+
+612
+00:24:53,580 --> 00:24:55,500
+subscribe to the channel if you haven't
+
+613
+00:24:55,500 --> 00:24:57,900
+already and press the like button
+
+614
+00:24:57,900 --> 00:25:00,000
+stay tuned for more interesting topics
+
+615
+00:25:00,000 --> 00:25:03,120
+coming up goodbye and thank you for the
+
+616
+00:25:03,120 --> 00:25:05,980
+interest in the brain
+
+617
+00:25:05,980 --> 00:25:11,820
+[Music]
+
+618
+00:25:11,820 --> 00:25:14,299
+okay
+
+619
+00:25:15,210 --> 00:25:19,769
+[Music]
+
